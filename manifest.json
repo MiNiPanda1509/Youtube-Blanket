@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Blanket",
+    "version": "1.0",
+    "description": "Hide YouTube Thumbnails",
+    "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png",
+      "16": "icon16.png"
+  },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "yt_blanket.png",
+      "default_title": "Youtube Blanket"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.youtube.com/"],
+        "js": ["content.js", "jquery-3.7.1.min.js"],
+        "css": ["content.css"]
+      }
+    ],
+    "options_page" : "options.html",
+    "permissions":[
+      "tabs",
+      "declarativeContent",
+      "scripting",
+      "storage",
+      "notifications"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions" :[
+      "https://www.youtube.com/*"
+    ]
+}
+  

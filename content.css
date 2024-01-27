@@ -1,0 +1,19 @@
+/*
+Turn off all suggested videos on home page
+*/
+
+#content.style-scope.ytd-rich-item-renderer{
+    opacity: 0;
+}
+
+/*
+Turn off suggested videos on the right
+*/
+
+#dismissible.style-scope.ytd-compact-video-renderer{  
+    opacity: 0;
+}
+
+#dismissible.style-scope.ytd-compact-radio-renderer{  
+    opacity: 0;
+}
