@@ -70,11 +70,10 @@ $(function(){
               type: 'basic',
               title: 'Limit reached',
               message: "Maybe it's time to focus now!!",
-              iconUrl: 'yt_n.png',
+              iconUrl: 'yt_blanket.png',
           }
             if(isBlanket == 0) // if blanket is removed
               chrome.notifications.create('limitNotif', notifOptions) //limitNotif is the ID for this notification
-
           }
         })
 
