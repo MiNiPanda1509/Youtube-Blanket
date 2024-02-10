@@ -4,7 +4,7 @@ Turn off all suggested videos on home page
 
 #content.style-scope.ytd-rich-item-renderer{
     opacity: 0; /* Initially invisible */
-    pointer-events: none; /* Allow clicks to pass through */
+    pointer-events: none !important; /* Doesn't allow clicks to pass through */
 }
 
 /*
@@ -13,10 +13,10 @@ Turn off suggested videos on the right
 
 #dismissible.style-scope.ytd-compact-video-renderer{  
     opacity: 0; /* Initially invisible */
-    pointer-events: none; /* Allow clicks to pass through */
-}
+    pointer-events: none !important; /* Doesn't allow clicks to pass through */
+} 
 
 #dismissible.style-scope.ytd-compact-radio-renderer{  
     opacity: 0; /* Initially invisible */
-    pointer-events: none; /* Allow clicks to pass through */
+    pointer-events: none !important; /* Doesn't allow clicks to pass through */
 }

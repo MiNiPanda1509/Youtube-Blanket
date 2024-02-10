@@ -16,11 +16,11 @@ $(function(){
 
         if(lmt && isNumeric(lmt)){
             chrome.storage.sync.set({'limit':parseInt(lmt)}, () => {
-                close() //close the tab after this
+                // close() //close the tab after this
             })
         }else{
             chrome.storage.sync.remove('limit', () => {
-                close() //close the tab after this
+                // close() //close the tab after this
             })
         }
     })
@@ -28,7 +28,7 @@ $(function(){
     $('#resetCount').click(() => {
         
         chrome.storage.sync.set({'blanketOffCount': 0}, () => {
-            close() //close the tab after this
+            // close() //close the tab after this
         })
 
     })
@@ -36,5 +36,7 @@ $(function(){
     chrome.storage.onChanged.addListener( (changes) => {
         if (changes.blanketOffCount !== undefined)
             chrome.action.setBadgeText({"text": changes.blanketOffCount.newValue.toString()})
+        if(changes.lastDayCount !== undefined)
+            $('#toggleTimes').text(changes.lastDayCount.newValue.toString())
     })
 })
